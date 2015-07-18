@@ -1,0 +1,12 @@
+<div class="col-sm-6 col-md-4" cellpadding="1" cellspacing="0">
+  <div class="thumbnail">
+    <%= image_tag user.image.url, {style: "height: 100px;"} %>
+    <div class="caption">
+      <h3><% if user.name.present? %><%= user.name %><% else %>No name<% end %></h3>
+      <p><%= link_to 'Show', user, class:"btn btn-primary" %>
+        <%= link_to 'Edit', edit_user_registration_path(user), class:"btn btn-primary" %> 
+      
+        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary" %></p>
+    </div>
+  </div>
+</div>

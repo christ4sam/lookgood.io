@@ -1,0 +1,84 @@
+<div class="row product">
+  <div class="col-md-2">
+    <%= image_tag(@product.image, class: "main") %>
+  </div>
+  <div class="col-md-10">
+    <h2><%= @product.name %> by <%= @product.brand.name %></h2>
+    <p><%= @product.description %></p>
+    <div id="star"></div>
+
+    <%= link_to "Buy #{number_to_currency(@product.price_retail, unit: "£")}", @product.url, target: :_blank, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div role="tabpanel">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a>
+    </li>
+    <li role="presentation">
+      <a href="#add-review" aria-controls="add-review" role="tab" data-toggle="tab">Add Review</a>
+    </li>
+    <li role="presentation">
+      <a href="#add-rating" aria-controls="add-rating" role="tab" data-toggle="tab">Add Rating</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="reviews">
+      <h3>Listing Reviews</h3>
+      <%= render @product.reviews %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="add-review">
+      <h3>Add Review</h3>
+      <p>
+        <%= render "reviews/form" %>
+      </p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="add-rating">
+      <h3>Add your rating</h3>
+      <div id="user_star"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+ 
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
+
+<% if user_signed_in? %>
+
+  <script>
+    $('#star').raty({
+      readOnly: true,
+      score: <%= @product.average_rating %>,
+      path: '/assets'
+    });
+
+    $('.tab-content #user_star').raty({
+      score: <%= @rating.score %>,
+      path: '/assets',
+      click: function(score, evt) {
+        $.ajax({
+          url: '/ratings/' + <%= @rating.id %>,
+          type: 'PATCH',
+          data: { score: score }
+        }).done(function (data){
+          console.log("liked");
+        });
+      }
+    });
+  </script>
+
+<% end %>

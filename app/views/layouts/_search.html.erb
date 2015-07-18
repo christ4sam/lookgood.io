@@ -1,0 +1,30 @@
+<div class="form-group">
+  <h2 class="advanced-search">Click for Advanced Search</h2>
+  <%= search_form_for @search do |f|%>
+    <%= f.condition_fields do |c|%>
+    <div class="field">
+      <%= c.attribute_fields do |a| %>
+        <div class="form-group">
+          <%= c.label "Filter Select" %>
+          <%= a.attribute_select({associations: [:brand]}, { class: "form-control"}) %>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= c.label "Predicate Select" %>
+        <%= c.predicate_select({}, {class: "form-control"}) %>
+      </div>
+      
+      <%= c.value_fields do |v| %>
+        <div class="form-group">
+          <%= c.label "Search" %>
+          <%= v.text_field :value, class: "form-control" %> 
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+    <div class="actions">
+      <%= f.submit "Search", class: "btn btn-default" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,75 @@
+Model diagram for skin care e-comerce and review app
+
+Your E-Comerce & Reviews Site on Skin Care Products
+
+models
+1. user
+2. product
+3. brand
+4. category
+5. reviews
+6. vendors
+7. shopping cart
+8. payment
+
+User
+has-many-reviews
+has-many-products
+
+User=>Reviews=>Product=>Category=>Brand=>vendor
+Product=>ShoppingCart=>User
+
+Brand name like SaSa might have differnt catygories like face wash, scrubs mosturizers etc
+
+Product
+has-many-reviews
+belongs-to-category
+belongs-to-brand-through-categoty
+belongs-to-vendor-through-brand
+
+Brand
+has-many-reviews-through-product
+has-many-categories
+has-many-product-through-catigory
+belongs-to-vendor
+
+Category
+has-many-products
+belongs-to-brand
+belongs-to-vendor
+
+
+Reviews
+belongs-user
+belogs-to-product-through-user
+
+Vendor
+has-many-brands
+has-many-categories
+has-many-products-through-catigories
+
+Shopping cart
+belongs-to-user
+has-many-product
+
+Payment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

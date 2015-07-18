@@ -1,0 +1,11 @@
+<div class="media">
+  <div class="media-left">
+    <%= link_to review.user do %>
+      <%= image_tag review.user.image, class: "media-object user-image" %>
+    <% end %>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= time_ago_in_words review.created_at %> ago </h4>
+    <p><%= review.description %></p>
+  </div>
+</div>

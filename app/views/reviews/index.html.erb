@@ -1,0 +1,17 @@
+<h1>Listing Reviews</h1>
+<ul>
+  <% @reviews.each  do |review| %>
+  <li> 
+    <p class="user-name"></p> 
+    <p><%= image_tag review.user.image %></p>
+    <p><%= review.product.name %></p>
+    <p><%= review.description %></p>
+    <p><%= review.created_at %></p>
+    <p><%= link_to "view product", review.product %></p>
+  </li>
+  <% end %>
+</ul> 
+
+<br>
+
+<%= link_to 'New Review', new_product_review_path(@product) %>

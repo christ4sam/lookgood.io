@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Aveda</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/media/images/favicon.ico" />
+    <style type="text/css">
+      *{margin:0;padding:0;}
+      body{color:#333;font-family:Arial,Helvetica,sans-serif;font-size:12px;min-width:1024px;height:100%}
+      .body-container{height:auto !important;min-height:100%;position:relative;}
+      #header{background:url("/media/images/global/header/bg_header.gif") repeat-x 0 0;height:80px;min-width:1024px;}
+      #header a.aveda_logo{display:table;height:51px;margin:0 auto;width:271px;}
+      #header img.logo{padding:14px 0 15px 0;}
+      .navigation{background:url("/media/images/global/gnav/gnav_bg.gif") repeat-x 0 0 #A2B0B0;clear:both;height:32px;}
+      #wrapper{margin:0 auto;width:1000px;}
+      h1{font-size:26px;font-weight:normal;}
+      h1.cs{color:#333;font-size:22px;font-weight:normal;margin:0 0 30px 0;text-transform:uppercase;}
+      h2{font-size:20px;font-weight:normal;}
+      h3{font-size:16px;font-weight:normal;}
+      h4{font-size:12px;font-weight:normal;}
+      a{color:#A8B33F;cursor:pointer;text-decoration:none;border:0;outline:0;}
+      p{margin-bottom:10px;}
+      img{border:0;}
+      #content{float:left;width:620px;}
+      #error-content{margin-bottom:10px;padding:40px 20px 20px 0;}
+      .bold{font-weight:bold;}
+      #footer{bottom:0;position:fixed;background:url("/media/images/global/footer/footer_bg.gif") repeat-x 0 0;clear:both;color:#666;height:27px;margin-top:-28px;width:100%;z-index:1000;}
+      ul.footer_nav{height:27px;list-style:none;}
+      ul.footer_nav li{float:right;padding:5px 10px 0 0;z-index:1000;}
+      ul.footer_nav li a{color:#666;font-size:11px;}
+      ul.footer_nav li img{vertical-align:middle;}
+    </style>
+  </head>
+  <body>
+
+    <div class="body-container">
+
+      <div id="header">
+        <a class="aveda_logo" href="/"><img class="logo" alt="Aveda" src="/media/images/global/header/aveda_logo.png"></a>
+      </div>
+
+      <div class="navigation">&nbsp;</div>
+
+      <div id="wrapper">
+        <div id="content">
+          <div id="error-content">
+            <h1 class="cs">Oops...sorry but the page you requested could not be found.</h1>
+            <div id="error-copy">
+              <p>If you have typed in a URL, please check the URL for proper spelling and punctuation. If you are having trouble finding a resource on our site, please try our <a href="/">Home Page</a> or alternatively <a href="/">Search Our Site</a>.</p><br/>
+              <p class="bold">Need help?</p>
+              <p>Call our customer services on <span class="bold">0800 054 2979</span> or <a href="/customer_service/contact_us.tmpl">email us</a></p>
+              <p>9.00am - 6.00pm Monday to Friday, 9.00am - 5.00pm Saturday<br />For queries regarding www.aveda.co.uk and any online purchases</p>
+              <p>Thank you for visiting Aveda UK online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <ul class="footer_nav">
+        <li><a href=""><img src="/images/icons/secure-icon.png"> 100% Secure</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>

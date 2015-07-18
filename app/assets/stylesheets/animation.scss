@@ -1,0 +1,22 @@
+.box {
+  display: block;
+  margin: 150px auto;
+  color: #1ec7e6;
+  -webkit-border-radius: 25px;
+  text-align: center;
+  padding: 15px;
+  opacity: 0.6;
+  background: black;
+  width: 450px;
+  height: 115px;
+  -webkit-transition: -webkit-transform 1s, opacity 1s, background 1s, width 1s, height 1s;
+  -webkit-box-shadow: rgb(120, 120, 120.6) 10px 15px 30px;
+}
+
+.box:hover {
+  -webkit-transform: rotate(360deg);
+  opacity: 2;
+  background: #ffffff;
+  width: 450px;
+  height: 230px;
+}

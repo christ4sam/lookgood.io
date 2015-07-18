@@ -1,0 +1,25 @@
+<div class="row product">
+  <div class="col-md-2">
+    <%= link_to image_tag(@user.image.url, class: "main"), @user.image.url %>
+  </div>
+  <div class="col-md-10">
+    <h2><% if @user.name.present? %><%= @user.name %><% else %>No name<% end %></h2>
+  </div>
+</div>
+
+<h3>Reviews</h3>
+<div class="row">
+  <% @user.reviews.each  do |review| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag review.product.image %>
+        <div class="caption">
+          <h3><%= review.product.name %></h3>
+          <p><%= review.created_at %></p>
+          <p><%= review.description %></p>
+          <p><%= link_to "View Product", review.product, class:"btn btn-primary" %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</ul>
